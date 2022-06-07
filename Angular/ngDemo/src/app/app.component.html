@@ -1,0 +1,42 @@
+<div class="container">
+<div class="row">
+  <div class="col parentBox">
+    <h2>User</h2>
+    <table width="100%">
+      <tr>
+        <th>User Name:</th>
+        <th class="removeLink">Remove</th>
+      </tr>
+      <tr *ngFor="let user of users; index as i">
+        <td>{{user}}</td>
+        <td class="removeLink" (click)="onRemoveUser(i)">Remove</td>
+      </tr>
+    </table>
+  </div>
+  <div class="col parentBox">
+    <h2>Admin</h2>
+    <table width="100%">
+      <tr>
+        <th>Admin Name:</th>
+        <th class="removeLink">Remove</th>
+      </tr>
+      <tr *ngFor="let admin of admins; index as i">
+        <td>{{admin}}</td>
+        <td class="removeLink" (click)="onRemoveAdmin(i)">Remove</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<hr style="border:1px solid black;">
+<div class="row">
+  <div class="col">
+      <app-child [boxColor]="'red'" [placeHolderText]="'create User'" (inputEvent)="pushUsers($event)">
+      </app-child>
+  </div>
+  <div class="col">
+      <app-child [boxColor]="'green'" [placeHolderText]="'create Admin'" (inputEvent)="pushAdmins($event)">
+      </app-child>
+  </div>
+</div>
+
+</div>

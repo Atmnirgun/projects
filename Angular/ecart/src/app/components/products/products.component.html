@@ -1,0 +1,49 @@
+<div class="cart-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/fe1ecdf8ac74c447.png?q=100">
+                <h6>All products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/46c3edba4449be2d.png?q=100">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/033d10763bb282c8.png?q=100">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/3c0ed3a475254040.png?q=100">
+                <h6>Jwelery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+        <div class="card col-md-3">
+            <img src="{{item.image}}" alt="">
+            <h5 class="itemdata">{{item.title}}</h5>
+            <p><strong>${{item.price}}</strong></p>
+            <p>{{item.category}}</p>
+            <p class="itemdata">{{item.description}}</p>
+            <button class="btn btn-primary" (click)="addToCart(item)">Add to cart</button>
+        </div>
+    </ng-container>
+    </div>
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+.parentBox{
+    background: #fdfdfd;
+    border: 1px solid #d9d9d9;
+    padding: 15px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.parentBox h2{
+    color: #4ec65f;
+    font-size: 42px;
+    margin: 0;
+    padding: 0 0 15px;
+}
+
+.parentBox table{
+    font-size: 30px;
+}
+
+.parentBox table th{
+    background: #f4f4f4;
+}
+
+.removeLink{
+    color: #d00421;
+}
